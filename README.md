@@ -1,3 +1,4 @@
+
 # Wafer2 快速开发 Demo - PHP
 
 本仓库是最简版的 Wafer2 开发套件，建议配合腾讯云微信小程序开发者工具解决方案一起使用。适用于想要使用 Wafer SDK 开发的开发者，Demo 对 SDK 进行了详细的使用和介绍，降低开发者的学习成本。
@@ -64,3 +65,6 @@
 8. 在模拟器中点击【登录】，看到显示“登录成功”，即为开通完成，可以开始你的其他开发了。
 
   ![登录测试](https://mc.qcloudimg.com/static/img/7102752e343d9d8791564b2ffc9d8308/10.png)
+
+# wafer2-quickstart-php-master
+小程序测试目录
