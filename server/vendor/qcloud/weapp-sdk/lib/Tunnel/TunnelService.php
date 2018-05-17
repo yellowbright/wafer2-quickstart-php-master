@@ -79,6 +79,7 @@ class TunnelService {
             $body = TunnelAPI::requestConnect(self::buildReceiveUrl());
 
             $data = $body['data'];
+
             $signature = $body['signature'];
 
             // 校验签名
@@ -91,7 +92,9 @@ class TunnelService {
         } catch (Exception $e) {
             throw new Exception(Constants::E_CONNECT_TO_TUNNEL_SERVER . ': ' . $e->getMessage());
         }
-
+        //test 固定tunnelid和url
+        // $tunnelId="ad7e15bc-bc3d-4808-ac3c-2dd00a228abb";
+        // $data['connectUrl']="wss://wqmki0uo.ws.qcloud.la/qcloud/ws?tunnelId=ad7e15bc-bc3d-4808-ac3c-2dd00a228abb&tcId=d2c93ebfbadf31a7df8d1a9d2239fb92";
         Logger::debug('ITunnelHandler [onRequest] =>', compact('tunnelId'));
         $handler->onRequest($tunnelId, $data['connectUrl']);
     }

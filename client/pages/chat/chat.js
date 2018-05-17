@@ -110,7 +110,7 @@ Page({
                 }
             });
         } else {
-            this.connect();
+          this.connect();
         }
     },
 
@@ -158,7 +158,7 @@ Page({
         });
 
         // 打开信道
-        tunnel.open();
+        tunnel.open(this.data.open_id_with);
     },
 
     /**

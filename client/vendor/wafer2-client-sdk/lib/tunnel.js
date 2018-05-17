@@ -142,7 +142,8 @@ function Tunnel(serviceUrl) {
     /**
      * 连接信道服务器，获取 WebSocket 连接地址，获取地址成功后，开始进行 WebSocket 连接
      */
-    function openConnect() {
+    function openConnect(open_id_with) {
+        if(!open_id_with) return;
         if (isOpening) return;
         isOpening = true;
 
@@ -152,6 +153,7 @@ function Tunnel(serviceUrl) {
         requestLib.request({
             url: serviceUrl,
             method: 'GET',
+            data: { open_id_with: open_id_with},
             success: function (response) {
                 if (+response.statusCode === 200 && response.data && response.data.data.connectUrl) {
                     openSocket(me.socketUrl = response.data.data.connectUrl);
